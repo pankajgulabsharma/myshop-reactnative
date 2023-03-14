@@ -54,6 +54,14 @@ const styles = StyleSheet.create({
   flatlistRipple: {
     justifyContent: 'center',
     alignItems: 'center',
+    // borderWidth: 2,
+  },
+  productCardContainer: {
+    flex: 1,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // borderWidth: 1,
+    margin: responsiveWidth(2),
   },
 });
 export default styles;

@@ -2,9 +2,12 @@ import {StyleSheet, Text as TextComp} from 'react-native';
 import React from 'react';
 import {colors} from '../../constants/AppStyles';
 
-const Text = ({children, numberOfLines, TextStyle}) => {
+const Text = ({children, numberOfLines, ellipsizeMode, TextStyle}) => {
   return (
-    <TextComp numberOfLines={numberOfLines} style={[styles.text, TextStyle]}>
+    <TextComp
+      numberOfLines={numberOfLines}
+      ellipsizeMode={ellipsizeMode}
+      style={[styles.text, TextStyle]}>
       {children}
     </TextComp>
   );

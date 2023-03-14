@@ -5,6 +5,8 @@ export default {
   topcategories: 'Top Categories',
   viewall: 'View all',
   newproducts: 'New Products',
+  new: 'New',
+  outofstocks: 'Out of stocks',
 
   Critical: 'Critical',
   High: 'High',

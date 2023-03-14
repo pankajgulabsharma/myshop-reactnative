@@ -2,7 +2,12 @@ import React, {useState} from 'react';
 import {ActivityIndicator, Image, StyleSheet, Text, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 
-const CachedImage = ({imageStyle, imageURL, showLoader = true}) => {
+const CachedImage = ({
+  imageStyle,
+  imageURL,
+  showLoader = true,
+  resizeMode = FastImage.resizeMode.contain,
+}) => {
   const [loading, setLoading] = useState(false);
   return (
     <View style={imageStyle}>
@@ -22,7 +27,7 @@ const CachedImage = ({imageStyle, imageURL, showLoader = true}) => {
                   uri: imageURL,
                 }
           }
-          resizeMode={FastImage.resizeMode.contain}
+          resizeMode={resizeMode}
           onLoadStart={() => setLoading(true)}
           onLoadEnd={() => setLoading(false)}>
           {showLoader && imageURL !== null ? (
