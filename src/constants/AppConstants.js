@@ -7,6 +7,10 @@ export default {
   newproducts: 'New Products',
   new: 'New',
   outofstocks: 'Out of stocks',
+  forgotPassword: 'Forgot Password',
+  login: 'Login',
+  signup: 'Sign Up',
+  phone: 'Phone',
 
   Critical: 'Critical',
   High: 'High',

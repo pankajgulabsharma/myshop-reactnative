@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import {StyleSheet, Text, View, Pressable} from 'react-native';
 import {colors} from '../../../constants/AppStyles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -9,11 +9,13 @@ import {
   responsiveFontSize,
 } from 'react-native-responsive-dimensions';
 
-const SearchInput = ({
-  serchContainer = {},
+const CustomInput = ({
+  focus = false,
+  customInputContainer = {},
   onChangeText = {},
   placeholder = 'Search...',
   value,
+  keyboardType = 'default',
   inputstyle = {},
   iconLeftName = 'search',
   iconLeftSize = 25,
@@ -21,11 +23,27 @@ const SearchInput = ({
   iconRightName = 'visibility',
   isIconRight = false,
   iconRightSize = 25,
-  iconRightColor = colors.skyBlue,
-  iconRightPress = {},
+  iconRightColor = colors.grey4,
+  iconRightPress = () => {},
+  secureTextEntry = false,
 }) => {
+  const userInputRef = useRef(null);
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    timerRef.current = setTimeout(() => {
+      userInputRef.current?.focus();
+    }, 500);
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [userInputRef]);
+
   return (
-    <View style={[styles.section, serchContainer]}>
+    <View style={[styles.section, customInputContainer]}>
       {iconLeftName ? (
         <MaterialIcons
           name={iconLeftName}
@@ -34,11 +52,14 @@ const SearchInput = ({
         />
       ) : null}
       <Textinput
+        ref={focus ? userInputRef : null}
+        keyboardType={keyboardType}
         TextInputStyle={[styles.input, inputstyle]}
         onChangeText={onChangeText}
         value={value}
         placeholder={placeholder}
         placeholderTextColor={styles.placeholdertextcolor}
+        secureTextEntry={secureTextEntry}
         lineColorAndroid="transparent"
       />
 
@@ -55,7 +76,7 @@ const SearchInput = ({
   );
 };
 
-export default SearchInput;
+export default CustomInput;
 
 const styles = StyleSheet.create({
   section: {
@@ -64,7 +85,6 @@ const styles = StyleSheet.create({
     // borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.grey1,
     paddingHorizontal: responsiveWidth(2),
     // paddingVertical: responsiveHeight(1.5),
   },
@@ -76,7 +96,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   placeholdertextcolor: {
-    color: colors.black2,
+    color: colors.grey2,
     fontWeight: 'bold',
   },
 });

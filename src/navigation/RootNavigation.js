@@ -10,13 +10,17 @@ const Stack = createNativeStackNavigator();
 export default function RootNavigation() {
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName="AppNavigator">
+      <Stack.Navigator initialRouteName="AuthNavigator">
         <Stack.Screen
           name="AppNavigator"
           component={AppNavigator}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="AuthNavigator" component={AuthNavigator} />
+        <Stack.Screen
+          name="AuthNavigator"
+          component={AuthNavigator}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

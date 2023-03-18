@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     // alignItems: 'center',
     padding: responsiveWidth(4),
+    paddingVertical: responsiveHeight(2),
   },
   imageBackground: {
     width: width,
@@ -28,10 +29,10 @@ const styles = StyleSheet.create({
   inputContainer: {
     // flexDirection: 'row',
     // justifyContent: 'space-between',
-    // marginHorizontal: responsiveWidth(3.2),
-    // borderWidth: 1,
     // alignItems: 'center',
     marginVertical: responsiveHeight(1.2),
+    // marginHorizontal: responsiveWidth(3.2),
+    // borderWidth: 1,
   },
   inputstyle: {
     fontSize: responsiveFontSize(2.3),
@@ -59,6 +60,7 @@ const styles = StyleSheet.create({
   loginButton: {
     backgroundColor: buttonColor.PRIMARY,
     marginBottom: responsiveHeight(2.5),
+    marginTop: responsiveHeight(1.5),
     // padding: responsiveWidth(5),
   },
   logintext: {

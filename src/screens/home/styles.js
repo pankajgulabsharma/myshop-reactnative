@@ -4,6 +4,7 @@ import {
   responsiveFontSize,
   responsiveHeight,
 } from 'react-native-responsive-dimensions';
+import {colors} from '../../constants/AppStyles';
 
 const styles = StyleSheet.create({
   searchContainer: {
@@ -40,7 +41,8 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(2.3),
     paddingLeft: responsiveWidth(2.5),
   },
-  serchContainer: {
+  customInputContainer: {
+    backgroundColor: colors.grey1,
     borderRadius: responsiveWidth(2),
   },
   cachedImageStyle: {

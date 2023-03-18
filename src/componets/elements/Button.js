@@ -11,14 +11,16 @@ import AppConstants from '../../constants/AppConstants';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 
 const Button = ({
+  rippleColor = buttonColor.PRIMARY,
   onPress = () => {},
   type = 'default',
-  title,
+  title = '',
   color = 'white',
   addonOutlineStyle = {},
   addonOutlineTextStyle = {},
   addonPrimaryStyle = {},
   addonPrimaryTextStyle = {},
+  addonTextContainerStyle = {},
   addonTextStyle = {},
   antIcon = false,
   backHandler = false,
@@ -41,7 +43,7 @@ const Button = ({
   if (type === 'outline')
     return (
       <Ripple
-        rippleColor={buttonColor.PRIMARY}
+        rippleColor={rippleColor}
         style={[styles.outline, addonOutlineStyle]}
         onPress={onPress}>
         <Text style={[styles.outlineText, addonOutlineTextStyle]}>{title}</Text>
@@ -50,8 +52,8 @@ const Button = ({
 
   return type === 'text' ? (
     <Ripple
-      rippleColor={buttonColor.PRIMARY}
-      style={styles.textButton}
+      rippleColor={rippleColor}
+      style={[styles.textButton, addonTextContainerStyle]}
       onPress={onPress}>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
         <Text
@@ -74,7 +76,7 @@ const Button = ({
     </Ripple>
   ) : (
     <Ripple
-      rippleColor={buttonColor.PRIMARY}
+      rippleColor={rippleColor}
       rippleDuration={700}
       onPress={onPress}
       style={[styles.button, addonPrimaryStyle]}>

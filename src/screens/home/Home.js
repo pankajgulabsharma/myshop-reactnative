@@ -17,7 +17,7 @@ import {
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Banner from '../../componets/common/banner';
 import Header from '../../componets/common/header';
-import SearchInput from '../../componets/common/searchinput';
+import CustomInput from '../../componets/common/custominput';
 import {Button, CachedImage, Text} from '../../componets/elements';
 import AppConstants from '../../constants/AppConstants';
 import {buttonColor, colors} from '../../constants/AppStyles';
@@ -58,145 +58,10 @@ const DATA = [
 ];
 
 const bnData = [
-  'https://previews.123rf.com/images/varijanta/varijanta1605/varijanta160500044/56755965-thin-line-flat-design-banner-for-sale-web-page-shopping-e-commerce-discounts-and-clearance-sale.jpg',
-  'https://mindstacktechnologies.com/wordpress/wp-content/uploads/2018/01/ecommerce-banner.jpg',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiU8pYb4d5oxTakVahS1ejMA9t6YlEOvWUIpvcwiq3&s',
   'https://img.freepik.com/free-vector/shopping-time-banner-with-realistic-map-cart-gift-bags-vector-illustration_548887-120.jpg',
-];
-
-const FData = [
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'First Item',
-  },
-  {
-    title: 'Second Item',
-  },
-  {
-    title: 'third Item',
-  },
-  {
-    title: 'Second last',
-  },
-  {
-    title: 'last Item',
-  },
-  {
-    title: 'Pankaj Item',
-  },
+  'https://previews.123rf.com/images/varijanta/varijanta1605/varijanta160500044/56755965-thin-line-flat-design-banner-for-sale-web-page-shopping-e-commerce-discounts-and-clearance-sale.jpg',
+  // 'https://mindstacktechnologies.com/wordpress/wp-content/uploads/2018/01/ecommerce-banner.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiU8pYb4d5oxTakVahS1ejMA9t6YlEOvWUIpvcwiq3&s',
 ];
 
 const pData = [
@@ -339,7 +204,7 @@ const Home = () => {
   };
 
   const renderItem = ({item}) => {
-    console.log('item===>', item);
+    // console.log('item===>', item);
     if (item?.empty) {
       return (
         <View
@@ -353,8 +218,9 @@ const Home = () => {
     }
 
     return (
-      <Ripple
-        rippleColor={buttonColor.PRIMARY}
+      <TouchableOpacity
+        // rippleColor={buttonColor.PRIMARY}
+        activeOpacity={0.8}
         onPress={() => {}}
         style={styles.productCardContainer}>
         <View style={{}}>
@@ -403,7 +269,7 @@ const Home = () => {
           <CachedImage
             imageStyle={{
               // flex: 1,
-              height: width / numColumns - responsiveHeight(10),
+              height: width / numColumns - responsiveHeight(6),
               width: width / numColumns - 40,
               alignItems: 'center',
               justifyContent: 'center',
@@ -435,7 +301,7 @@ const Home = () => {
             <Text>{`20% OFF`}</Text>
           </View>
         </View>
-      </Ripple>
+      </TouchableOpacity>
     );
   };
 
@@ -517,11 +383,11 @@ const Home = () => {
       <View>
         <Header />
         <View style={styles.searchContainer}>
-          <SearchInput
+          <CustomInput
             value={search}
             onChangeText={setSearch}
             inputstyle={styles.inputstyle}
-            serchContainer={styles.serchContainer}
+            customInputContainer={styles.customInputContainer}
           />
           <Ripple
             rippleColor={buttonColor.PRIMARY}

@@ -12,15 +12,15 @@ export const toTitleCase = str =>
       )
     : '';
 
-export const validateEmail = username => {
-  if (!username.match(mailformat)) {
-    return 'Invalid Email! Please enter a valid email';
-  } else {
-    return '';
-  }
-};
+// export const validateEmail = username => {
+//   if (!username.match(mailformat)) {
+//     return 'Invalid Email! Please enter a valid email';
+//   } else {
+//     return '';
+//   }
+// };
 
-export const validation = text => {
+export const validateArray = text => {
   const validationArray = {
     upperCase: false,
     lowerCase: false,
@@ -87,7 +87,7 @@ export const validation = text => {
 // };
 
 export const getCommaString = data => {
-   return data?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return data?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
 
 export const listArray = [
@@ -138,5 +138,5 @@ export const statusArray = [
   {
     value: AppConstants.Critical,
     color: colors.darkRed,
-  }
+  },
 ];

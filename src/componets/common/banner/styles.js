@@ -11,11 +11,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'gainsboro',
+    marginTop: 10,
+    // borderWidth: 1,
   },
   swipper: {
-    width: width,
+    flex: 1,
     alignItems: 'center',
-    marginTop: 10,
+
     // borderWidth: 1,
   },
   subSwipperContainer: {
@@ -26,8 +28,8 @@ const styles = StyleSheet.create({
   },
   imageBanner: {
     height: width / 2,
-    width: width,
-    borderRadius: 10,
+    // width: width,
+    // borderRadius: 10,
     // borderWidth: 1,
   },
 });
