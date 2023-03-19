@@ -18,6 +18,13 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
+  // useEffect(() => {
+  //   return () => {
+  //     setUser(initialState);
+  //     setErrors({});
+  //   };
+  // }, []);
+
   const handleChange = (name, value) => {
     setUser({...user, [name]: value});
   };
@@ -38,7 +45,7 @@ const Login = () => {
     <ScrollView style={styles.mainContainer}>
       <View style={{justifyContent: 'center', alignItems: 'center'}}>
         <ImageBackground
-          source={require('../../assets/images/login/shopping_bag.png')}
+          source={require('../../assets/images/login/shopping_cart.png')}
           resizeMode="contain"
           style={styles.imageBackground}></ImageBackground>
         <Text TextStyle={styles.loginText}>{AppConstants.appName}</Text>

@@ -8,6 +8,7 @@ import {buttonColor} from '../../constants/AppStyles';
 import validateUser from '../../utils/validateUser';
 import {navigationRef} from '../../navigation/NavigatorService';
 import ScreenNames from '../../constants/ScreenNames';
+import {responsiveWidth} from 'react-native-responsive-dimensions';
 
 const Signup = () => {
   const initialState = {
@@ -44,10 +45,10 @@ const Signup = () => {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.mainContainer}>
+    <ScrollView style={styles.mainContainer}>
       <View style={{justifyContent: 'center', alignItems: 'center'}}>
         <ImageBackground
-          source={require('../../assets/images/login/shopping_bag.png')}
+          source={require('../../assets/images/login/shopping_cart.png')}
           resizeMode="contain"
           style={styles.imageBackground}></ImageBackground>
         <Text TextStyle={styles.loginText}>{AppConstants.appName}</Text>
@@ -95,7 +96,6 @@ const Signup = () => {
           <Text TextStyle={styles.errorText}>{errors.phone}</Text>
         ) : null}
       </View>
-
       <View style={styles.inputContainer}>
         <CustomInput
           value={user.password}
@@ -130,21 +130,29 @@ const Signup = () => {
           <Text TextStyle={styles.errorText}>{errors.confirmPassword}</Text>
         ) : null}
       </View>
+      <Button
+        type="text"
+        title={`${AppConstants.forgotPassword} ?`}
+        addonTextContainerStyle={styles.forgotTextContainerStyle}
+        addonTextStyle={styles.forgotTextStyle}
+      />
 
-      <Button
-        title={AppConstants.signup}
-        rippleColor={buttonColor.BUTTON_DANGER}
-        addonPrimaryStyle={styles.loginButton}
-        addonPrimaryTextStyle={styles.logintext}
-        onPress={handleSubmit}
-      />
-      <Button
-        title={AppConstants.login}
-        rippleColor={buttonColor.BUTTON_DANGER}
-        addonPrimaryStyle={styles.loginButton}
-        addonPrimaryTextStyle={styles.logintext}
-        onPress={() => navigationRef.navigate(ScreenNames.Login)}
-      />
+      <View style={{paddingBottom: responsiveWidth(7)}}>
+        <Button
+          title={AppConstants.signup}
+          rippleColor={buttonColor.BUTTON_DANGER}
+          addonPrimaryStyle={styles.loginButton}
+          addonPrimaryTextStyle={styles.logintext}
+          onPress={handleSubmit}
+        />
+        <Button
+          title={AppConstants.login}
+          rippleColor={buttonColor.BUTTON_DANGER}
+          addonPrimaryStyle={styles.loginButton}
+          addonPrimaryTextStyle={[styles.logintext]}
+          onPress={() => navigationRef.navigate(ScreenNames.Login)}
+        />
+      </View>
     </ScrollView>
   );
 };

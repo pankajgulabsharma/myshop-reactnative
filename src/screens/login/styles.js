@@ -10,10 +10,12 @@ let width = Dimensions.get('screen').width;
 let height = Dimensions.get('screen').height;
 const styles = StyleSheet.create({
   mainContainer: {
-    // flex: 1,
+    flex: 1,
     // justifyContent: 'center',
     // alignItems: 'center',
     padding: responsiveWidth(4),
+
+    backgroundColor: colors.white,
   },
   imageBackground: {
     width: width,
