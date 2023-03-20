@@ -20,7 +20,21 @@ export const buttonColor = {
   GRAY_ICON: '#8a8a8f',
 };
 
+// aqua: {
+//   100: '#ccffff',
+//   200: '#99ffff',
+//   300: '#66ffff',
+//   400: '#33ffff',
+//   500: '#00ffff',
+//   600: '#00cccc',
+//   700: '#009999',
+//   800: '#006666',
+//   900: '#003333',
+// },
+
 export const colors = {
+  lightblue: '#b7fbff',
+  aqua: '#00ffff',
   pinkPurple: '#9B5989',
   darkPink: '#8D6281',
   greyishBlack: '#080808',

@@ -380,7 +380,7 @@ const Home = () => {
 
   return (
     <SafeAreaView>
-      <View>
+      <View style={{backgroundColor: colors.white}}>
         <Header />
         <View style={styles.searchContainer}>
           <CustomInput

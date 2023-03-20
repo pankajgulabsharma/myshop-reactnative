@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, ImageBackground, ScrollView} from 'react-native';
 import styles from './styles';
 import CustomInput from '../../componets/common/custominput';
@@ -21,6 +21,14 @@ const Signup = () => {
   const [user, setUser] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
+  useEffect(() => {
+    console.log('===Signup====');
+    // return () => {
+    //   setUser(initialState);
+    //   setErrors({});
+    // };
+  }, []);
 
   const handleChange = (name, value) => {
     // console.log('name===', name);

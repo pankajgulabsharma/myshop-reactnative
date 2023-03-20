@@ -11,9 +11,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: responsiveWidth(3.2),
-    // borderWidth: 1,
     alignItems: 'center',
     marginBottom: responsiveHeight(1.2),
+    backgroundColor: colors.white,
+    // borderWidth: 1,
   },
   filter: {
     marginLeft: responsiveWidth(1),

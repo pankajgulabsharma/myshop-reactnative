@@ -3,6 +3,7 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
+import {colors} from '../../../constants/AppStyles';
 
 let width = Dimensions.get('window').width;
 let height = Dimensions.get('window').height;
@@ -12,6 +13,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'gainsboro',
     marginTop: 10,
+    backgroundColor: colors.white,
     // borderWidth: 1,
   },
   swipper: {

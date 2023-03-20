@@ -1,5 +1,3 @@
-import {specialCharacters} from './Regex';
-
 export default {
   appName: 'My Shop',
   topcategories: 'Top Categories',

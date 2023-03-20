@@ -15,7 +15,7 @@ export default function RootNavigation() {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName="AuthNavigator">
+      <Stack.Navigator initialRouteName="AppNavigator">
         <Stack.Screen
           name="AppNavigator"
           component={AppNavigator}

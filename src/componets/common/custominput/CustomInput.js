@@ -82,10 +82,11 @@ const styles = StyleSheet.create({
   section: {
     flex: 1,
     flexDirection: 'row',
-    // borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: responsiveWidth(2),
+    backgroundColor: colors.white,
+    // borderWidth: 1,
     // paddingVertical: responsiveHeight(1.5),
   },
   input: {

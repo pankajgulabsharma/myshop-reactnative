@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: responsiveWidth(2),
     paddingVertical: responsiveHeight(1.5),
+    backgroundColor: colors.white,
     // borderBottomWidth: responsiveWidth(0.2),
     // borderBottomColor: colors.spanishGrey,
 
