@@ -9,6 +9,12 @@ export default {
   login: 'Login',
   signup: 'Sign Up',
   phone: 'Phone',
+  search: 'Search',
+  editProfile: 'Edit Profile',
+  myOrders: 'My Orders',
+  logout: 'Logout',
+  manageAddress: 'Manage Address',
+  changePassword: 'Change Password',
 
   Critical: 'Critical',
   High: 'High',

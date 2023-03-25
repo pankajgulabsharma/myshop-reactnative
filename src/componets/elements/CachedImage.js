@@ -32,7 +32,7 @@ const CachedImage = ({
           onLoadEnd={() => setLoading(false)}>
           {showLoader && imageURL !== null ? (
             <ActivityIndicator
-              style={{alignSelf: 'center'}}
+              style={{alignSelf: 'center', justifyContent: 'center'}}
               animating={loading}
             />
           ) : null}

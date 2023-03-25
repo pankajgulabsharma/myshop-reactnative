@@ -6,7 +6,7 @@ import {Button, Text} from '../../componets/elements';
 import AppConstants from '../../constants/AppConstants';
 import {buttonColor} from '../../constants/AppStyles';
 import validateUser from '../../utils/validateUser';
-import {navigationRef} from '../../navigation/NavigatorService';
+import {navigate} from '../../navigation/NavigatorService';
 import ScreenNames from '../../constants/ScreenNames';
 import {responsiveWidth} from 'react-native-responsive-dimensions';
 
@@ -158,7 +158,7 @@ const Signup = () => {
           rippleColor={buttonColor.BUTTON_DANGER}
           addonPrimaryStyle={styles.loginButton}
           addonPrimaryTextStyle={[styles.logintext]}
-          onPress={() => navigationRef.navigate(ScreenNames.Login)}
+          onPress={() => navigate(ScreenNames.Login)}
         />
       </View>
     </ScrollView>

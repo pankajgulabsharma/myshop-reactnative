@@ -15,6 +15,7 @@ const CustomInput = ({
   onChangeText = {},
   placeholder = 'Search...',
   value,
+  disabled = false,
   keyboardType = 'default',
   inputstyle = {},
   iconLeftName = 'search',
@@ -61,6 +62,7 @@ const CustomInput = ({
         placeholderTextColor={styles.placeholdertextcolor}
         secureTextEntry={secureTextEntry}
         lineColorAndroid="transparent"
+        disabled={disabled}
       />
 
       {iconRightName && isIconRight ? (

@@ -10,22 +10,23 @@ import ScreenNames from '../constants/ScreenNames';
 import Account from '../screens/account';
 import Cart from '../screens/cart';
 import Categories from '../screens/categories';
-import Home from '../screens/home';
+import HomeNavigator from './HomeNavigator';
 
 const Tab = createBottomTabNavigator();
 
 export default function BottomBarNavigation() {
   return (
     <Tab.Navigator
-      initialRouteName={ScreenNames.Home}
+      initialRouteName={ScreenNames.HomeNavigator}
       screenOptions={{
         tabBarActiveTintColor: buttonColor.PRIMARY,
         tabBarInactiveTintColor: buttonColor.PRIMARY,
         tabBarShowLabel: false,
+        tabBarHideOnKeyboard: true,
       }}>
       <Tab.Screen
-        name={ScreenNames.Home}
-        component={Home}
+        name={ScreenNames.HomeNavigator}
+        component={HomeNavigator}
         options={{
           headerShown: false,
           tabBarIcon: ({focused, color, size}) => {

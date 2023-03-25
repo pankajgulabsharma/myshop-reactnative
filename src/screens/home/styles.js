@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     marginHorizontal: responsiveWidth(3.2),
     alignItems: 'center',
     marginBottom: responsiveHeight(1.2),
-    backgroundColor: colors.white,
+    backgroundColor: colors.grey97,
     // borderWidth: 1,
   },
   filter: {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginHorizontal: responsiveWidth(3.2),
+    // marginHorizontal: responsiveWidth(3.2),
     // borderWidth: 1,
   },
   leftTitleText: {
@@ -46,13 +46,18 @@ const styles = StyleSheet.create({
     backgroundColor: colors.grey1,
     borderRadius: responsiveWidth(2),
   },
+  search: {
+    fontWeight: 'bold',
+    fontSize: responsiveFontSize(2.3),
+    marginHorizontal: responsiveWidth(2.3),
+  },
   cachedImageStyle: {
     height: responsiveHeight(10),
     width: responsiveHeight(10),
     // borderWidth: 1,
   },
   flatlistContainer: {
-    marginLeft: responsiveWidth(3.2),
+    // marginLeft: responsiveWidth(3.2),
   },
   flatlistRipple: {
     justifyContent: 'center',
@@ -65,6 +70,8 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // borderWidth: 1,
     margin: responsiveWidth(2),
+    backgroundColor: colors.white,
+    borderRadius: responsiveWidth(5),
   },
 });
 export default styles;

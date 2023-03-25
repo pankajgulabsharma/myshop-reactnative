@@ -6,7 +6,7 @@ import {Button, Text} from '../../componets/elements';
 import AppConstants from '../../constants/AppConstants';
 import {buttonColor} from '../../constants/AppStyles';
 import validateUser from '../../utils/validateUser';
-import {navigationRef} from '../../navigation/NavigatorService';
+import {navigate} from '../../navigation/NavigatorService';
 import ScreenNames from '../../constants/ScreenNames';
 
 const Login = () => {
@@ -104,7 +104,7 @@ const Login = () => {
         rippleColor={buttonColor.BUTTON_DANGER}
         addonPrimaryStyle={styles.loginButton}
         addonPrimaryTextStyle={styles.logintext}
-        onPress={() => navigationRef.navigate(ScreenNames.Signup)}
+        onPress={() => navigate(ScreenNames.Signup)}
       />
     </ScrollView>
   );

@@ -1,9 +1,8 @@
-import {View, Text} from 'react-native';
-import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from 'react';
+import ScreenNames from '../constants/ScreenNames';
 import Login from '../screens/login';
 import Signup from '../screens/signup';
-import ScreenNames from '../constants/ScreenNames';
 
 const Stack = createNativeStackNavigator();
 export default function AppNavigator() {
