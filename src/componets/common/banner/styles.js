@@ -11,15 +11,13 @@ let height = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'gainsboro',
-    marginTop: 10,
+    // backgroundColor: 'gainsboro',
     backgroundColor: colors.white,
     // borderWidth: 1,
   },
   swipper: {
     flex: 1,
     alignItems: 'center',
-
     // borderWidth: 1,
   },
   subSwipperContainer: {

@@ -7,7 +7,7 @@ import CustomInput from '../../componets/common/custominput';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ripple from 'react-native-material-ripple';
 import styles from './styles';
-import {pop} from '../../navigation/NavigatorService.js';
+import {navigate, pop} from '../../navigation/NavigatorService.js';
 import {
   responsiveFontSize,
   responsiveHeight,
@@ -175,7 +175,7 @@ const Search = () => {
       <TouchableOpacity
         // rippleColor={buttonColor.PRIMARY}
         activeOpacity={0.8}
-        onPress={() => {}}
+        onPress={() => navigate(ScreenNames.Productdetails)}
         style={styles.productCardContainer}>
         <View style={{}}>
           <View

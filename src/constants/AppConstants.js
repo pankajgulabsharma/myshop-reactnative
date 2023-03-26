@@ -15,6 +15,7 @@ export default {
   logout: 'Logout',
   manageAddress: 'Manage Address',
   changePassword: 'Change Password',
+  addToCart: 'Add To Cart',
 
   Critical: 'Critical',
   High: 'High',

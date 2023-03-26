@@ -6,6 +6,7 @@ export default {
   Cart: 'Cart',
   Account: 'Account',
   BottomBarNavigator: 'BottomBarNavigator',
-  Search: 'Search',
   HomeNavigator: 'HomeNavigator',
+  Search: 'Search',
+  Productdetails: 'Productdetails',
 };

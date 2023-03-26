@@ -222,7 +222,7 @@ const Home = () => {
       <TouchableOpacity
         // rippleColor={buttonColor.PRIMARY}
         activeOpacity={0.8}
-        onPress={() => {}}
+        onPress={() => navigate(ScreenNames.Productdetails)}
         style={styles.productCardContainer}>
         <View style={{}}>
           <View
@@ -365,8 +365,12 @@ const Home = () => {
             ItemSeparatorComponent={_renderSeparator}
           />
         </View>
-
-        <Banner bannerData={bnData} />
+        <View
+          style={{
+            marginTop: responsiveHeight(2),
+          }}>
+          <Banner bannerData={bnData} />
+        </View>
 
         <View>
           <View style={styles.textsContainer}>

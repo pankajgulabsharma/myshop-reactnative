@@ -1,10 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
+import SingleCart from './SingleCart';
+import styles from './styles';
 
 const Cart = () => {
   return (
-    <View>
-      <Text>Cart</Text>
+    <View style={styles.mainContainer}>
+      <SingleCart />
     </View>
   );
 };

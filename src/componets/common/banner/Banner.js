@@ -6,18 +6,26 @@ import styles from './styles';
 import Ripple from 'react-native-material-ripple';
 import {buttonColor} from '../../../constants/AppStyles';
 
-const Banner = ({bannerData = [], autoplay = true}) => {
+const Banner = ({
+  bannerData = [],
+  autoplay = true,
+  showsButtons = false,
+  bannerContainerStyle = {},
+  bannerSubContainerStyle = {},
+  bannerImage = {},
+  resizeMode,
+}) => {
   const [banner, setBanner] = useState(bannerData);
 
   return (
     <ScrollView>
-      <View style={styles.container}>
+      <View style={[styles.container, bannerContainerStyle]}>
         <View style={styles.swipper}>
           <Swiper
-            showsButtons={false}
+            showsButtons={showsButtons}
             autoplay={autoplay}
             autoplayTimeout={2}
-            style={styles.subSwipperContainer}>
+            style={[styles.subSwipperContainer, bannerSubContainerStyle]}>
             {banner.map((item, id) => {
               return (
                 <Ripple
@@ -25,8 +33,9 @@ const Banner = ({bannerData = [], autoplay = true}) => {
                   onPress={() => {}}
                   key={id}>
                   <CachedImage
-                    imageStyle={styles.imageBanner}
+                    imageStyle={[styles.imageBanner, bannerImage]}
                     imageURL={item}
+                    resizeMode={resizeMode}
                   />
                 </Ripple>
               );

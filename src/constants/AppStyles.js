@@ -63,7 +63,7 @@ export const colors = {
   grey3: '#D6D6D680',
   grey4: '#91919145',
   grey5: '#727272',
-  grey97:"#F7F7F7",
+  grey97: '#F7F7F7',
   spanishGrey: '#989898',
   darkGrey: '#292929',
   darkGrey1: '#FFFFFF66',
